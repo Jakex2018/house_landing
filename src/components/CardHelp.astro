@@ -1,0 +1,24 @@
+---
+import {
+    Card,
+    CardContent,
+    CardHeader,
+    CardTitle,
+} from "@/components/ui/card";
+const{title}=Astro.props
+---
+
+<Card className=" bg-[#DDC7BB]">
+    <CardHeader>
+        <div class="size-12 bg-white rounded-lg p-2 mb-2">
+            <img src="/mapPin.svg" alt="" />
+        </div>
+        <CardTitle>{title}</CardTitle>
+    </CardHeader>
+    <CardContent>
+        <span class="text-sm text-[#4F3527]">
+            Benefit from our team's seasoned expertise for a smooth buying
+            experience
+        </span>
+    </CardContent>
+</Card>

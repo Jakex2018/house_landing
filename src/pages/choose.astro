@@ -1,0 +1,24 @@
+---
+import { help } from "@/models/model";
+import "@/styles/globals.css";
+import CardHelp from "@/components/CardHelp.astro";
+
+---
+
+
+<section class="flex flex-col mt-48 px-20 min-h-[100vh]">
+    <div class="text-center flex flex-col items-center justify-center">
+        <h4
+            class="text-4xl font-extrabold text-center leading-[50px] mb-5"
+        >
+            Why Choose Us
+        </h4>
+        <p class="max-w-[80vh] text-[#4F3527]">
+            Elevating Your Home Buying Experience with Expertise,
+            Integrity, and Unmatched Personalized Service
+        </p>
+    </div>
+    <div class="grid sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-4 items-center justify-center gap-y-10 mx-auto gap-x-10 mt-20">
+        {help.map((item) => <CardHelp title={item.title} />)}
+    </div>
+</section>

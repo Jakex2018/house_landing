@@ -1,0 +1,9 @@
+---
+const {room,title,ft}=Astro.props;
+---
+
+<div class="flex items-center gap-x-4">
+    <img src="/location.svg" alt="" class="size-6 p-1 rounded-lg bg-white" />
+
+    <span>{room||ft} {title}</span>
+</div>

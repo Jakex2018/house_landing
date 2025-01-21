@@ -1,0 +1,26 @@
+---
+import InputTitle from "@/components/InputTitle.astro";
+import { Button } from "@/components/ui/button";
+---
+
+<div class="flex flex-col items-center justify-center min-h-[70vh] mt-20" id="contact">
+    <h4 class="text-4xl font-extrabold text-center leading-[50px] mb-5">
+        Do You Have Any Questions?<br />Get Help From Us
+    </h4>
+    <div class="flex gap-x-10 items-center justify-center mt-5 sm:px-2 px-8">
+        <div class="flex items-center gap-x-3">
+            <img src="/verified.svg" alt="" />
+            <span class="font-bold text-lg text-[#2B1B12]"
+                >Chat live with our support team</span
+            >
+        </div>
+        <div class="flex items-center gap-x-3">
+            <img src="/verified.svg" alt="" />
+            <span class="font-bold text-lg text-[#2B1B12]">Browse our FAQ</span>
+        </div>
+    </div>
+    <div class="flex sm:flex-row flex-col gap-y-4 items-center gap-x-10 mt-10">
+        <InputTitle title="'Enter your email address" icon="email.svg" class="sm:min-w-[50vh] min-w-[30vh]" />
+        <Button className="bg-[#2B1B12]">Submit</Button>
+    </div>
+</div>

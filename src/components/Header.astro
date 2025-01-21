@@ -1,0 +1,28 @@
+---
+import { navLinks } from "@/models/model";
+import { Button } from "./ui/button";
+---
+
+<header
+    class="animate-slide-top mt-10 flex w-full justify-between items-center"
+>
+    <img src="/logo.svg" class="cursor-pointer" alt="" />
+    <nav class="sm:flex hidden  items-center  md:gap-x-3 lg:gap-x-8 gap-x-10 font-bold">
+        {
+            navLinks.map((link) => (
+                <a
+                    accesskey={link.name}
+                    href={link.link}
+                    class="cursor-pointer hover:opacity-50 z-40 duration-500 sm:text-lg text-sm"
+                >
+                    {link.name}
+                </a>
+            ))
+        }
+    </nav>
+    <div class="flex items-center gap-x-6 z-40">
+        <img src="/search.svg" alt="" class="size-5 cursor-pointer" />
+        <img src="/user.svg" alt="" class="size-5 cursor-pointer" />
+        <Button className="bg-[#4f3527]">Sign Up</Button>
+    </div>
+</header>

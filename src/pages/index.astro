@@ -1,0 +1,42 @@
+---
+import {inputPlaceholders } from "@/models/model";
+import Layout from "../layouts/Layout.astro";
+import "@/styles/globals.css";
+import { Button } from "@/components/ui/button";
+import InputTitle from "@/components/InputTitle.astro";
+import Home from "./home.astro";
+import Help from "./help.astro";
+import Choose from "./choose.astro";
+import Popular from "./popular.astro";
+import People from "./people.astro";
+import Question from "./question.astro";
+import Footer from "@/components/Footer.astro";
+---
+
+<Layout>
+	<main
+		class="flex flex-col items-center justify-center mx-auto overflow-hidden"
+	>
+		<Home />
+		<div
+			class="relative flex items-start mt-0 justify-between bg-white min-h-[30vh] w-full"
+		>
+			<div
+				class="absolute sm:px-2 px-10 gap-x-3 -top-20 left-0 right-0 flex lg:flex-row  flex-col justify-evenly items-center mx-auto sm:max-w-[80vh] md:max-w-[60vh] lg:max-w-4xl max-w-[30vh] sm:min-h-[30vh] md:min-h-[25vh] min-h-[40vh] rounded-[10px] shadow-md bg-[#DDC7BB]"
+			>
+				{
+					inputPlaceholders.map((item) => (
+						<InputTitle title={item.placeholder} icon={item.icon} class="lg:min-w-full md:min-w-[50vh]"  />
+					))
+				}
+				<Button>Sign Up</Button>
+			</div>
+		</div>
+		<Help />
+		<Choose />
+		<Popular />
+		<People />
+		<Question />
+		<Footer />
+	</main>
+</Layout>
