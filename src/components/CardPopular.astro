@@ -1,18 +1,20 @@
 ---
 import { Button } from "@/components/ui/button";
-import {
-    Card,
-    CardFooter,
-} from "@/components/ui/card";
+import { Card, CardFooter } from "@/components/ui/card";
 import TitleIcon from "./TitleIcon.astro";
-const {image,title,rooms,ft,price} = Astro.props;
+const { image, title, rooms, ft, price } = Astro.props;
+import { Image } from "astro:assets";
 ---
 
 <Card className=" bg-[#DDC7BB] rounded-[20px] overflow-hidden group ">
-    <img
+    <Image
         src={`/${image}`}
-        class="size-[352px] w-full object-cover hover:scale-105 duration-300 "
+        class="size-[352px] w-full object-cover hover:scale-105 duration-300"
         alt=""
+        width="1600"
+        height="900"
+        decoding="async"
+        loading="lazy"
     />
     <CardFooter>
         <div class="flex flex-col items-start justify-start mt-5 w-full group">

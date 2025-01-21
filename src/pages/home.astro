@@ -2,11 +2,12 @@
 import "@/styles/globals.css";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header.astro";
+import { Image } from "astro:assets";
 ---
 
-<section class="relative bg-[#FEF7F2] px-20 " id="home">
+<section class="relative bg-[#FEF7F2] px-20" id="home">
     <Header />
-    <div class="flex sm:flex-row flex-col items-start mt-36 justify-between ">
+    <div class="flex sm:flex-row flex-col items-start mt-36 justify-between">
         <div
             class="animate-slide-right flex flex-col items-start md:min-w-[50vh] sm:min-w-[40vh] min-w-[30vh] justify-start"
         >
@@ -21,6 +22,14 @@ import Header from "@/components/Header.astro";
             </p>
             <Button className="bg-[#4f3527] px-20 py-6">Sign up</Button>
         </div>
-        <img src="/hero.svg" alt="" class="animate-slide-left size-[1000px] object-fill -mt-60" />
+        <Image
+            src="/hero.svg"
+            alt="hero"
+            class="animate-slide-left size-[1000px] object-fill -mt-60"
+            width="1600"
+            height="900"
+            decoding="async"
+            loading="lazy"
+        />
     </div>
 </section>
